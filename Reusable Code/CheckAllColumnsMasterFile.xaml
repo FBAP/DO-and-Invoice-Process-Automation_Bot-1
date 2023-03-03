@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1159.2,3150.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1159.2,5149.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CheckAllColumnsMasterFile_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -82,7 +82,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This .xaml will check if all the required columns exist in the master file." DisplayName="checking if all required columns exists" sap:VirtualizedContainerService.HintSize="1169.6,3085.6" sap2010:WorkflowViewState.IdRef="Sequence_35">
+  <Sequence sap2010:Annotation.AnnotationText="This .xaml will check if all the required columns exist in the master file." DisplayName="checking if all required columns exists" sap:VirtualizedContainerService.HintSize="1169.6,5084.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_FieldsToBeExtracted" />
     </Sequence.Variables>
@@ -93,9 +93,9 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch for columns check" sap:VirtualizedContainerService.HintSize="1128,2961.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch for columns check" sap:VirtualizedContainerService.HintSize="1128,4960.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Master column check" sap:VirtualizedContainerService.HintSize="1091.2,2730.4" sap2010:WorkflowViewState.IdRef="Sequence_39">
+        <Sequence DisplayName="Master column check" sap:VirtualizedContainerService.HintSize="1091.2,4729.6" sap2010:WorkflowViewState.IdRef="Sequence_39">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -149,10 +149,10 @@
               </ActivityAction>
             </ui:ExcelApplicationScope.Body>
           </ui:ExcelApplicationScope>
-          <If Condition="[dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;DONumberCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;CompanyNameCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;ItemGroupCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;ItemSerialCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;JobTypeCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;JobSiteAddressCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;StartTime1Col&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;EndTime1Col&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;StartTime2Col&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;EndTime2Col&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;SignatureCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;DOorTimesheetFilePathCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;MonthlyExcelFilePathCol&quot;).ToString)]" DisplayName="If All columns exists" sap:VirtualizedContainerService.HintSize="1049.6,407.2" sap2010:WorkflowViewState.IdRef="If_3">
+          <If Condition="[dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;QuotationNumCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;QuotationFilePathCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;PONumberCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;POFilePathCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;ProjectCodeCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;InvoiceFilePathCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;InvoiceNumberCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;ToProceedWithInvoiceCol&quot;).ToString) and dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;DONumberCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;CompanyNameCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;ItemGroupCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;ItemSerialCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;JobTypeCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;JobSiteAddressCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;StartTime1Col&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;EndTime1Col&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;StartTime2Col&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;EndTime2Col&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;SignatureCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;DOorTimesheetFilePathCol&quot;).ToString) And dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;MonthlyExcelFilePathCol&quot;).ToString)]" DisplayName="If All columns exists" sap:VirtualizedContainerService.HintSize="1049.6,52.8" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -178,7 +178,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <If Condition="[dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;StatusBot1Col&quot;).tostring)]" DisplayName="If Status column exists" sap:VirtualizedContainerService.HintSize="1049.6,52.8" sap2010:WorkflowViewState.IdRef="If_14">
+          <If Condition="[dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;StatusBot1Col&quot;).tostring)]" DisplayName="If Status column exists" sap:VirtualizedContainerService.HintSize="1049.6,1160" sap2010:WorkflowViewState.IdRef="If_14">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -186,48 +186,182 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="Status column exists" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
+              <Sequence DisplayName="Status column exists #1" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - Status column exists" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Status column exists in master file.&quot;]" />
+                <ui:LogMessage DisplayName="Log Message - Status column exists #1" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Status column exists in master file.&quot;]" />
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Status column not exists" sap:VirtualizedContainerService.HintSize="630.4,977.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
+              <Sequence DisplayName="Status column not exists #1" sap:VirtualizedContainerService.HintSize="630.4,1000.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - Status column doesn't exists" sap:VirtualizedContainerService.HintSize="588.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Status Bot1 column does not exist in master file. Creating Status column.&quot;]" />
-                <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope -  create status col" sap:VirtualizedContainerService.HintSize="588.8,752" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                <ui:LogMessage DisplayName="Log Message - Status column doesn't exists #1" sap:VirtualizedContainerService.HintSize="588.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Status Bot1 column does not exist in master file. Creating Status column.&quot;]" />
+                <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope -  create status col #1" sap:VirtualizedContainerService.HintSize="588.8,775.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
                   <ueab:ExcelProcessScopeX.Body>
                     <ActivityAction x:TypeArguments="ui:IExcelProcess">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do #1" sap:VirtualizedContainerService.HintSize="555.2,665.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                      <Sequence DisplayName="Do #4" sap:VirtualizedContainerService.HintSize="555.2,688.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File- Create Status column" sap:VirtualizedContainerService.HintSize="513.6,572.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[in_Config1(&quot;MasterFilePath&quot;).ToString+in_Config1(&quot;MasterFileName&quot;).ToString+&quot;.xlsx&quot;]">
+                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File- Create Status column #1" sap:VirtualizedContainerService.HintSize="513.6,596" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" UseTemplate="True" WorkbookPath="[in_Config1(&quot;MasterFilePath&quot;).ToString+in_Config1(&quot;MasterFileName&quot;).ToString+&quot;.xlsx&quot;]">
                           <ueab:ExcelApplicationCard.Body>
                             <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="MasterExcel" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Insert col #1" sap:VirtualizedContainerService.HintSize="480,303.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                              <Sequence DisplayName="Insert col #2" sap:VirtualizedContainerService.HintSize="480,303.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ueab:InsertColumnX ColumnFormat="{x:Null}" DisplayName="Insert Column #1" HasHeaders="True" sap:VirtualizedContainerService.HintSize="438.4,210.4" sap2010:WorkflowViewState.IdRef="InsertColumnX_1" NewColumnName="[in_Config1(&quot;StatusBot1Col&quot;).ToString]" Range="[MasterExcel.Sheet(in_Config1(&quot;SheetNameFieldsExtracted&quot;).ToString)]" RelativeColumnName="[in_Config1(&quot;MonthlyExcelFilePathCol&quot;).ToString]" RelativePosition="After" />
+                                <ueab:InsertColumnX ColumnFormat="{x:Null}" DisplayName="Insert Column #2" HasHeaders="True" sap:VirtualizedContainerService.HintSize="438.4,210.4" sap2010:WorkflowViewState.IdRef="InsertColumnX_1" NewColumnName="[in_Config1(&quot;StatusBot1Col&quot;).ToString]" Range="[MasterExcel.Sheet(in_Config1(&quot;SheetNameFieldsExtracted&quot;).ToString)]" RelativeColumnName="[in_Config1(&quot;MonthlyExcelFilePathCol&quot;).ToString]" RelativePosition="After" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ueab:ExcelApplicationCard.Body>
+                        </ueab:ExcelApplicationCard>
+                      </Sequence>
+                    </ActivityAction>
+                  </ueab:ExcelProcessScopeX.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ueab:ExcelProcessScopeX>
+              </Sequence>
+            </If.Else>
+          </If>
+          <If Condition="[dt_FieldsToBeExtracted.Columns.Contains( in_Config1(&quot;StatusBot2Col&quot;).ToString)]" DisplayName="If Status column 2 exists" sap:VirtualizedContainerService.HintSize="1049.6,1136.8" sap2010:WorkflowViewState.IdRef="If_17">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Status column exists" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Status column exists" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[&quot;Status Bot2 column exists in master file.&quot;]" />
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Status column not exists" sap:VirtualizedContainerService.HintSize="630.4,977.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Status column doesn't exists" sap:VirtualizedContainerService.HintSize="588.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Status Bot2 column does not exist in master file. Creating Status Bot2 column.&quot;]" />
+                <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope -  create status col" sap:VirtualizedContainerService.HintSize="588.8,752" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+                  <ueab:ExcelProcessScopeX.Body>
+                    <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do #1" sap:VirtualizedContainerService.HintSize="555.2,665.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File- Create Status column" sap:VirtualizedContainerService.HintSize="513.6,572.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="[in_Config1(&quot;MasterFilePath&quot;).ToString+in_Config1(&quot;MasterFileName&quot;).ToString+&quot;.xlsx&quot;]">
+                          <ueab:ExcelApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="MasterExcel" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Insert col #3" sap:VirtualizedContainerService.HintSize="480,303.2" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ueab:InsertColumnX ColumnFormat="{x:Null}" DisplayName="Insert Column #3" HasHeaders="True" sap:VirtualizedContainerService.HintSize="438.4,210.4" sap2010:WorkflowViewState.IdRef="InsertColumnX_3" NewColumnName="[in_Config1(&quot;StatusBot2Col&quot;).ToString]" Range="[MasterExcel.Sheet(in_Config1(&quot;SheetNameFieldsExtracted&quot;).ToString)]" RelativeColumnName="[in_Config1(&quot;Comments1Col&quot;).ToString]" RelativePosition="After" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ueab:ExcelApplicationCard.Body>
+                        </ueab:ExcelApplicationCard>
+                      </Sequence>
+                    </ActivityAction>
+                  </ueab:ExcelProcessScopeX.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ueab:ExcelProcessScopeX>
+              </Sequence>
+            </If.Else>
+          </If>
+          <If Condition="[dt_FieldsToBeExtracted.Columns.Contains(in_Config1(&quot;Comments2Col&quot;).ToString)]" DisplayName="If Comments column 2  exists" sap:VirtualizedContainerService.HintSize="1049.6,1136.8" sap2010:WorkflowViewState.IdRef="If_18">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Comments column exists #1" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Comments column exists #1" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[&quot;Comments2 column exists in master file.&quot;]" />
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Comments column not exists #1" sap:VirtualizedContainerService.HintSize="630.4,977.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Comments column doesn't exists #1" sap:VirtualizedContainerService.HintSize="588.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Comments2 column does not exist in master file in W1 column. Creating Comments2 column.&quot;]" />
+                <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - add comments col #1" sap:VirtualizedContainerService.HintSize="588.8,752" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
+                  <ueab:ExcelProcessScopeX.Body>
+                    <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do #3" sap:VirtualizedContainerService.HintSize="555.2,665.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File add comments col #1" sap:VirtualizedContainerService.HintSize="513.6,572.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="[in_Config1(&quot;MasterFilePath&quot;).ToString+in_Config1(&quot;MasterFileName&quot;).ToString+&quot;.xlsx&quot;]">
+                          <ueab:ExcelApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="MasterExcel" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Insert col #1" sap:VirtualizedContainerService.HintSize="480,303.2" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ueab:InsertColumnX ColumnFormat="{x:Null}" DisplayName=" Insert Column #1" HasHeaders="True" sap:VirtualizedContainerService.HintSize="438.4,210.4" sap2010:WorkflowViewState.IdRef="InsertColumnX_4" NewColumnName="[in_Config1(&quot;Comments2Col&quot;).ToString]" Range="[MasterExcel.Sheet(in_Config1(&quot;SheetNameFieldsExtracted&quot;).ToString)]" RelativeColumnName="[in_Config1(&quot;StatusBot2Col&quot;).ToString]" RelativePosition="After" />
                               </Sequence>
                             </ActivityAction>
                           </ueab:ExcelApplicationCard.Body>

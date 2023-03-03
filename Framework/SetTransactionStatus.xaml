@@ -150,14 +150,14 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(System.Data.DataRow))]" DisplayName="If TransactionItem is a QueueItem (Success)" sap:VirtualizedContainerService.HintSize="820.8,1438.4" sap2010:WorkflowViewState.IdRef="If_7">
+            <If Condition="[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(System.Data.DataRow))]" DisplayName="If TransactionItem is a QueueItem (Success)" sap:VirtualizedContainerService.HintSize="820.8,1566.4" sap2010:WorkflowViewState.IdRef="If_7">
               <If.Then>
-                <ui:RetryScope DisplayName="Retry Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="635.2,1249.6" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberSetTransactionStatus&quot;))]">
+                <ui:RetryScope DisplayName="Retry Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="635.2,1377.6" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberSetTransactionStatus&quot;))]">
                   <ui:RetryScope.ActivityBody>
                     <ActivityAction>
-                      <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="593.6,1073.6" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+                      <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="593.6,1201.6" sap2010:WorkflowViewState.IdRef="TryCatch_11">
                         <TryCatch.Try>
-                          <Sequence DisplayName="#1" sap:VirtualizedContainerService.HintSize="556.8,842.4" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                          <Sequence DisplayName="#1" sap:VirtualizedContainerService.HintSize="556.8,970.4" sap2010:WorkflowViewState.IdRef="Sequence_98">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,7 +190,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily Success" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Success" />
+                                        <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily Success" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusSuccessMessage&quot;).ToString]" />
                                         <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily Success Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]">
                                           <ui:ExcelWriteCell.Text>
                                             <InArgument x:TypeArguments="x:String">
@@ -223,7 +223,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso Success" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Success" />
+                                        <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso Success" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusSuccessMessage&quot;).ToString]" />
                                         <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso Success Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]">
                                           <ui:ExcelWriteCell.Text>
                                             <InArgument x:TypeArguments="x:String">
@@ -256,7 +256,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly Success" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Success" />
+                                        <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly Success" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusSuccessMessage&quot;).ToString]" />
                                         <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly Success Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]">
                                           <ui:ExcelWriteCell.Text>
                                             <InArgument x:TypeArguments="x:String">
@@ -462,7 +462,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily BE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Fail" />
+                                          <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily BE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusBEMessage&quot;).ToString]" />
                                           <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily BE Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_BusinessException.message]" />
                                         </Sequence>
                                       </ActivityAction>
@@ -489,7 +489,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso BE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Fail" />
+                                          <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso BE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusBEMessage&quot;).ToString]" />
                                           <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso BE Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_BusinessException.message]" />
                                         </Sequence>
                                       </ActivityAction>
@@ -516,7 +516,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly BE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Fail" />
+                                          <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly BE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusBEMessage&quot;).ToString]" />
                                           <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly BE Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_12" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_BusinessException.message]" />
                                         </Sequence>
                                       </ActivityAction>
@@ -682,7 +682,7 @@
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence x:Key="Daily" DisplayName="Daily" sap:VirtualizedContainerService.HintSize="475.2,604" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                                  <Sequence x:Key="Daily" DisplayName="Daily" sap:VirtualizedContainerService.HintSize="475.2,644" sap2010:WorkflowViewState.IdRef="Sequence_110">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -702,14 +702,14 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily SE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Fail" />
+                                            <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily SE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusSEMessage&quot;).ToString]" />
                                             <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Daily SE Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_SystemException.message]" />
                                           </Sequence>
                                         </ActivityAction>
                                       </ui:ExcelApplicationScope.Body>
                                     </ui:ExcelApplicationScope>
                                   </Sequence>
-                                  <Sequence x:Key="Consolidated" DisplayName="Consolidated" sap:VirtualizedContainerService.HintSize="475.2,604" sap2010:WorkflowViewState.IdRef="Sequence_113">
+                                  <Sequence x:Key="Consolidated" DisplayName="Consolidated" sap:VirtualizedContainerService.HintSize="475.2,644" sap2010:WorkflowViewState.IdRef="Sequence_113">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -729,7 +729,7 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso SE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Fail" />
+                                            <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso SE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusSEMessage&quot;).ToString]" />
                                             <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Conso SE Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_SystemException.message]" />
                                           </Sequence>
                                         </ActivityAction>
@@ -756,7 +756,7 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly SE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="Fail" />
+                                            <ui:ExcelWriteCell Cell="[&quot;W&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly SE" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_Config(&quot;StatusSEMessage&quot;).ToString]" />
                                             <ui:ExcelWriteCell Cell="[&quot;X&quot;+ (io_TransactionNumber+1).ToString]" DisplayName="Write Cell for Monthly SE Comments" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="[in_Config(&quot;SheetNameFieldsExtracted&quot;).ToString]" Text="[in_SystemException.message]" />
                                           </Sequence>
                                         </ActivityAction>
