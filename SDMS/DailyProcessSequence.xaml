@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>620,492.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1540.8,10035.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DailyProcessSequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="82">
@@ -101,7 +101,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Processing steps for Daily process like fetching deatils from SDMS portal and entering them to output file. This will also download DO PDFs for Daily process." DisplayName="DailyProcessSequence" sap:VirtualizedContainerService.HintSize="478.4,428" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Processing steps for Daily process like fetching deatils from SDMS portal and entering them to output file. This will also download DO PDFs for Daily process." DisplayName="DailyProcessSequence" sap:VirtualizedContainerService.HintSize="1551.2,9970.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="CompanyName" />
       <Variable x:TypeArguments="x:Boolean" Name="DOPDFDownloadSuccess" />
@@ -126,7 +126,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch for daily" sap:VirtualizedContainerService.HintSize="436.8,291.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch for daily" sap:VirtualizedContainerService.HintSize="1509.6,9846.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,22 +134,22 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Open delivery order page" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fe9922ab-8734-489e-a259-7419410adaec" Version="V2">
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Open delivery order page" sap:VirtualizedContainerService.HintSize="1472.8,9615.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fe9922ab-8734-489e-a259-7419410adaec" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do these steps" sap:VirtualizedContainerService.HintSize="727.2,6708" sap2010:WorkflowViewState.IdRef="Sequence_25">
+              <Sequence DisplayName="Do these steps" sap:VirtualizedContainerService.HintSize="1439.2,9318.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - Enter URL" sap:VirtualizedContainerService.HintSize="685.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Entering the DO Transaction URL...&quot;]" />
-                <uix:NGoToUrl DisplayName="Go To delivery orders URL" sap:VirtualizedContainerService.HintSize="685.6,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_TransactionItem1(&quot;URL&quot;).tostring]" Version="V1" />
-                <Sequence DisplayName="Fetch Info Tab details" sap:VirtualizedContainerService.HintSize="685.6,3921.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <ui:LogMessage DisplayName="Log Message - Enter URL" sap:VirtualizedContainerService.HintSize="1397.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Entering the DO Transaction URL...&quot;]" />
+                <uix:NGoToUrl DisplayName="Go To delivery orders URL" sap:VirtualizedContainerService.HintSize="1397.6,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_TransactionItem1(&quot;URL&quot;).tostring]" Version="V1" />
+                <Sequence DisplayName="Fetch Info Tab details" sap:VirtualizedContainerService.HintSize="1397.6,6532" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="dt_JobSite" />
                   </Sequence.Variables>
@@ -159,8 +159,8 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message - Click on Info" sap:VirtualizedContainerService.HintSize="568.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Clicking on Info tab&quot;]" />
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Info'" sap:VirtualizedContainerService.HintSize="568.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Version="V1">
+                  <ui:LogMessage DisplayName="Log Message - Click on Info" sap:VirtualizedContainerService.HintSize="1356,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Clicking on Info tab&quot;]" />
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Info'" sap:VirtualizedContainerService.HintSize="1356,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://hhtc.insightservicing.sg/deliveryOrder/9180" DesignTimeRectangle="88, 337, 56, 40" ElementType="Text" FriendlyName="'Info'" FullSelectorArgument="&lt;webctrl aaname='Info' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Info' tag='A' type='' class='' check:innerText='Info' /&gt;" Guid="c8e48a70-4558-41d0-95d7-c63a24dd8740" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAsCAYAAAA5KtvpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFuSURBVGhD7ZUxS8NAFMf7nW7KIAQEoUOndGlAsB/AgKCL3VxKBgkOjp06dUsnB+ki6ZIMUrcuFtwKASFOAeHvtbkUjQWtzVXy+n4QwnuXg/xyf15q2DNYmDosTB0Wpg4LU4eFqcPC1GFh6rDwLklnPjp1A0IImN0AierrpDThyY2AM4xV9Rti+KcG3HGale/ZTTf/KDyBJxz4c1XuCE3Ci9OTMtMJ+udNmDKy4rANd/iM5XnO7nB1Zsu+gaOWDfu4L/Uz4qiHC8tcxtyoO+hFm3zEn9EoLF+4dYvwVbWSAO5BG4MXVa874WkPTctFkPeSEJ7VgBep2JeAVuFixMNrgc59PpqKwimC7vc96diFuByVNtC0CnuPqlR8faYovH4P5j4c4a0ivy0s/Fe2F16sG5/WMwhHWrIYWg0Xo7xXtaG1sbAkeRqgc1KB31JVYGHqsDB1WJg6LEwdFqYOC1OHhamzEn57qJG+cvZMGPgAymn0y9HXtT4AAAAASUVORK5CYII=" InformativeScreenshot="d8941c53fdd62dfa9925a039386d03d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -192,7 +192,7 @@
                       <uix:TargetAnchorable DesignTimeRectangle="134, 618, 1329, 143" FriendlyName="'Job Site'" FullSelectorArgument="&lt;webctrl aaname='Job Site Job Site Address Postal Code Contact Person Contact Num*' tag='TABLE' /&gt;" Guid="8574c6b7-3271-4350-9ba1-84278eb8d817" InformativeScreenshot="40208a5c31bb002b697c67fd42e44bcb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                     </uix:NExtractData.Target>
                   </uix:NExtractData>
-                  <If Condition="[dt_JobSite.Rows.Count=1]" DisplayName="If combine multiple addresses if they exist." sap:VirtualizedContainerService.HintSize="568.8,222.4" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[dt_JobSite.Rows.Count=1]" DisplayName="If combine multiple addresses if they exist." sap:VirtualizedContainerService.HintSize="1356,222.4" sap2010:WorkflowViewState.IdRef="If_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -220,8 +220,8 @@
                       </Assign>
                     </If.Else>
                   </If>
-                  <ui:LogMessage DisplayName="Log Message - Fetch DO Number" sap:VirtualizedContainerService.HintSize="568.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Fetching DO Number...&quot;]" />
-                  <uix:NGetText DisplayName="Get Text 'Delivery Order No.'" sap:VirtualizedContainerService.HintSize="568.8,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Version="V1">
+                  <ui:LogMessage DisplayName="Log Message - Fetch DO Number" sap:VirtualizedContainerService.HintSize="1356,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Fetching DO Number...&quot;]" />
+                  <uix:NGetText DisplayName="Get Text 'Delivery Order No.'" sap:VirtualizedContainerService.HintSize="1356,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Version="V1">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://hhtc.insightservicing.sg/deliveryOrder/9180" DesignTimeRectangle="309, 386, 339, 37" ElementType="Text" FriendlyName="'DO230104004'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' /&gt;" Guid="7bb8d349-3565-49a5-ad28-3918ae6d774e" InformativeScreenshot="c54699eaaf21f7fb7847c34b040fcdea.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -296,10 +296,10 @@
                     </uix:NGetText.Text>
                   </uix:NGetText>
                   <ui:LogMessage DisplayName="Log Message - downloading the DO Pdfs" sap:VirtualizedContainerService.HintSize="568.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Downloading the DO PDF for: &quot;+ in_TransactionItem1(&quot;Delivery Order No.&quot;).ToString]" />
-                  <ui:RetryScope DisplayName="Retry Scope try to download pdf if failed" sap:VirtualizedContainerService.HintSize="568.8,788.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                  <ui:RetryScope DisplayName="Retry Scope try to download pdf if failed" sap:VirtualizedContainerService.HintSize="1356,3399.2" sap2010:WorkflowViewState.IdRef="RetryScope_1">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
-                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="375.2,540.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1314.4,3151.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -310,14 +310,14 @@
                               <uix:TargetAnchorable BrowserURL="https://hhtc.insightservicing.sg/deliveryOrder/9180" DesignTimeRectangle="284, 426, 68, 34" ElementType="Button" FriendlyName="'PDF'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn btn-success' aaname=' PDF' check:innerText='PDF' /&gt;" Guid="ea66d53c-cfe7-4b9e-8393-4ca93a9449e3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAmCAYAAABnE91tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFuSURBVGhD7ZrNasJAFIX7Pt1W39MnKdl14a6lXbgR+gDZFCSbICIiKNzmdn504k1OWrEk5hz4FslMEu43P9nMgzCtoSCQKOj5q5DJ/EMeX95GjTpQFyFRkDY8vS5l+v45atSBugiJgtSe9cAYURchFGRAQQAKAlAQgIIAFASgIAAFAf5F0Gx99G8W2axXZp++QkGA/gkq9r5nyFEWeWgvJfd3Yw5bmSXv6NKnOz0VtJfMX2c7fSpcu+LzIvRfyeJw3m71uY7eC5rmW9lUd1zBVvF+xuzK5HoQgtzoNyQWVOPXgvx34jIa2AwyJTXJURJB9SVkF/8zQ2uCkrR9D3BzQacifdCGebFJ4/1lcDNIRzTda8Konhdr9auoL7EEq3h37/SeQQqqyEvJ4u/acb0gS/xABHXNXwQluViy9y6oZ9xE0D1BQQAKAlAQgIIAFASgIAAFASgIYAri8RdH4/EXHqByqAPzABVjh4JaI/INnQ6IKycyidgAAAAASUVORK5CYII=" InformativeScreenshot="6b7d190ec1371423c6baea4d839554fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Version="V1">
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="1272.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://hhtc.insightservicing.sg/deliveryOrder/9180" DesignTimeRectangle="909, 263, 50, 34" ElementType="Button" FriendlyName="'Yes'" FullSelectorArgument="&lt;webctrl name='yt3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='yt3' tag='BUTTON' type='button' class='btn btn-info' aaname='Yes' check:innerText='YES' /&gt;" Guid="403bcdaf-2313-41f4-b41f-b42883b41a17" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAmCAYAAACPk2hGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE8SURBVGhD7ZnBasJAEIZ9xF49eujjtKcehOITeG2PxYOX4sGToKClvbQIgloaiETTkX9hlmGxKU0iZrbzw0c22YnMx5hc0qJIE7/Y0+ST2ncvdHU7Vwl6hwPHi2Gj032l6/s3laB3OHC8GKxP3aAJOHBMTAMmpg0T04aJacPEtFGr2HD25e7Hka89jLe0z79p+p5Sb7CiNMtdDWeTHOjmcenAWkb+zl+pfWIfm8w3G56z2KmGUYc91OB8tEj8ugy1i/GE0LxcY+8nMZ4W5OT1KtQuBtAgI6dXNDH8VREcw70ynEWMJ4VICRaTkVNiOaSq4FnEQDgtUDQxCQv+VldEI8X4masytUaIoWax3Pna8KVThouIyaCm/7x2R5nGPmOXxsS0YWLaMDFtmJg2/pdYtJ+Rov3wF1siFSM6Ap8z1BOi8VnPAAAAAElFTkSuQmCC" InformativeScreenshot="62bc073ef535020bbf5828f3117dbe80.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="Complete" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check if save as popup exists" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Timeout="[Cint(in_Config1(&quot;DelayLong&quot;))]" Version="V1">
+                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check if save as popup exists" sap:VirtualizedContainerService.HintSize="1272.8,2663.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Timeout="[Cint(in_Config1(&quot;DelayLong&quot;))]" Version="V1">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Save as popup exists" sap:VirtualizedContainerService.HintSize="844.8,2382.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <Sequence DisplayName="Save as popup exists" sap:VirtualizedContainerService.HintSize="844.8,2444.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -369,7 +369,7 @@
                                     </uix:TargetAnchorable>
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Confirm Save As'" sap:VirtualizedContainerService.HintSize="803.2,397.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Version="V1">
+                                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Confirm Save As'" sap:VirtualizedContainerService.HintSize="803.2,603.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fe9922ab-8734-489e-a259-7419410adaec" Version="V1">
                                   <uix:NCheckState.IfExists>
                                     <Sequence DisplayName="Target appears - Replace popup exists" sap:VirtualizedContainerService.HintSize="375.2,384.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -428,6 +428,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </uix:NCheckState>
+                                <Delay DisplayName="Delay before file downlaod check" Duration="[TimeSpan.Parse( in_Config1(&quot;DelayBeforeFileDownload&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="803.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
                                 <ui:FileExistsX DisplayName="File Exists - check if DO Pdf downloaded successfully" Exists="[FileDownloaded]" sap:VirtualizedContainerService.HintSize="803.2,134.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[CurrentDOFilePath]" />
                                 <If Condition="[FileDownloaded]" DisplayName="If file is downloaded" sap:VirtualizedContainerService.HintSize="803.2,449.6" sap2010:WorkflowViewState.IdRef="If_2">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -509,7 +510,7 @@
                             </uix:NCheckState.Target>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -530,7 +531,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:RetryScope>
                 </Sequence>
-                <Sequence DisplayName="Fetch Asstes Tab details" sap:VirtualizedContainerService.HintSize="685.6,1376" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence DisplayName="Fetch Asstes Tab details" sap:VirtualizedContainerService.HintSize="1397.6,1376" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -686,14 +687,14 @@
           </uix:NApplicationCard.TargetApp>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1476,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
