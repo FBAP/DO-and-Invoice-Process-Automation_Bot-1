@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2612.8,6108.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2612.8,6473.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractInput_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="47">
@@ -107,7 +107,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This .xaml will Extract the total records to process from SDMS web portal." DisplayName="Consolidated process" sap:VirtualizedContainerService.HintSize="2623.2,6044" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap2010:Annotation.AnnotationText="This .xaml will Extract the total records to process from SDMS web portal." DisplayName="Consolidated process" sap:VirtualizedContainerService.HintSize="2623.2,6408.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ExtractedDTString" />
       <Variable x:TypeArguments="s:DateTime" Name="StartDate" />
@@ -124,7 +124,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch for Conso process" sap:VirtualizedContainerService.HintSize="2581.6,5920" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch for Conso process" sap:VirtualizedContainerService.HintSize="2581.6,6284.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,13 +132,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Hup Hin SDMS" sap:VirtualizedContainerService.HintSize="2544.8,5665.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Version="V2">
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Hup Hin SDMS" sap:VirtualizedContainerService.HintSize="2544.8,6030.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do these steps #1" sap:VirtualizedContainerService.HintSize="2511.2,5448.8" sap2010:WorkflowViewState.IdRef="Sequence_60">
+              <Sequence DisplayName="Do these steps #1" sap:VirtualizedContainerService.HintSize="2511.2,5813.6" sap2010:WorkflowViewState.IdRef="Sequence_60">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,15 +161,15 @@
                     <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                   </Assign.Value>
                 </Assign>
-                <If Condition="[String.IsNullOrEmpty( in_Config1(&quot;StartDateConsolidated&quot;).tostring) and  String.IsNullOrEmpty( in_Config1(&quot;EndDateConsolidated&quot;).tostring)]" DisplayName="If check if user has entered start date'" sap:VirtualizedContainerService.HintSize="2469.6,52.8" sap2010:WorkflowViewState.IdRef="If_5">
+                <If Condition="[String.IsNullOrEmpty( in_Config1(&quot;StartDateConsolidated&quot;).tostring) and  String.IsNullOrEmpty( in_Config1(&quot;EndDateConsolidated&quot;).tostring)]" DisplayName="If check if user has entered start date'" sap:VirtualizedContainerService.HintSize="2469.6,620.8" sap2010:WorkflowViewState.IdRef="If_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence DisplayName="assign current months start and end date" sap:VirtualizedContainerService.HintSize="304,257.6" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                    <Sequence DisplayName="assign current months start and end date" sap:VirtualizedContainerService.HintSize="304,460" sap2010:WorkflowViewState.IdRef="Sequence_62">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -191,6 +191,22 @@
                           <InArgument x:TypeArguments="s:DateTime">[StartDate.AddMonths(1).AddDays(-1)]</InArgument>
                         </Assign.Value>
                       </Assign>
+                      <Assign DisplayName="Assign Converted start date" sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_20">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[ConvertedStartDate]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[StartDate.ToString("dd/MM/yyyy")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Assign Converted end date" sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_21">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[ConvertedEndDate]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[EndDate.ToString("dd/MM/yyyy")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
                     </Sequence>
                   </If.Then>
                   <If.Else>
@@ -203,39 +219,23 @@
                       <ui:LogMessage DisplayName="Log Message - user entered start date" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_56" Level="Info" Message="[&quot;User has entered Start Date and End Date for Consolidated process in Config file. They are: &quot; +in_Config1(&quot;StartDateConsolidated&quot;).tostring+&quot; and &quot;+in_Config1(&quot;EndDateConsolidated&quot;).tostring +&quot; respectively.&quot;]" />
                       <Assign DisplayName="Assign Start date to user choice" sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_29">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="s:DateTime">[StartDate]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[ConvertedStartDate]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="s:DateTime">[CDate(in_Config1("StartDateConsolidated").tostring)]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[in_Config1("StartDateConsolidated").tostring]</InArgument>
                         </Assign.Value>
                       </Assign>
                       <Assign DisplayName="Assign End date to user choice" sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_30">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="s:DateTime">[EndDate]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[ConvertedEndDate]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="s:DateTime">[CDate(in_Config1("EndDateConsolidated").tostring)]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[in_Config1("EndDateConsolidated").tostring]</InArgument>
                         </Assign.Value>
                       </Assign>
                     </Sequence>
                   </If.Else>
                 </If>
-                <Assign DisplayName="Assign Converted start date" sap:VirtualizedContainerService.HintSize="2469.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_20">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[ConvertedStartDate]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[StartDate.ToString("dd/MM/yyyy")]</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <Assign DisplayName="Assign Converted end date" sap:VirtualizedContainerService.HintSize="2469.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_21">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[ConvertedEndDate]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[EndDate.ToString("dd/MM/yyyy")]</InArgument>
-                  </Assign.Value>
-                </Assign>
                 <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0.3" DisplayName="Type Into 'Start Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="2469.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Text="[ConvertedStartDate + &quot;[k(enter)]&quot;]" Version="V1">
                   <uix:NTypeInto.Target>
                     <uix:TargetAnchorable BrowserURL="https://hhtc.insightservicing.sg/deliveryOrder" DesignTimeRectangle="398, 502, 541, 43" ElementType="InputBox" FriendlyName="'04/11/2022'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='grd-white form-control' aaname='Start Date' /&gt;" Guid="5ca27dbf-d330-4ab1-9fd6-137dfa3d3bc6" ImageBase64="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" InformativeScreenshot="0696e76bfb7570b84cc94cdef973d0c0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">

@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1148,5307.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1148,5205.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractInput_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This .xaml will extract input from SDMS for Daily process." DisplayName="Extract Input for Daily process main sequence" sap:VirtualizedContainerService.HintSize="1158.4,5242.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap2010:Annotation.AnnotationText="This .xaml will extract input from SDMS for Daily process." DisplayName="Extract Input for Daily process main sequence" sap:VirtualizedContainerService.HintSize="1158.4,5140.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ExcelFilename" />
       <Variable x:TypeArguments="x:String" Name="ConvertedStartDate" />
@@ -115,7 +115,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch Extract input for daily" sap:VirtualizedContainerService.HintSize="1116.8,5118.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Extract input for daily" sap:VirtualizedContainerService.HintSize="1116.8,5016.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -123,7 +123,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Extract the total records to process from SDMS web portal." DisplayName="Extract Input for Daily process" sap:VirtualizedContainerService.HintSize="1080,4864" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="Extract the total records to process from SDMS web portal." DisplayName="Extract Input for Daily process" sap:VirtualizedContainerService.HintSize="1080,4762.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="dt_DatatableExtracted" />
           </Sequence.Variables>
@@ -151,31 +151,41 @@
               <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_RetryIntervalMedium">[Timespan.Parse(in_Config1("RetryIntervalMedium").ToString)]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Hup Hin SDMS" sap:VirtualizedContainerService.HintSize="1038.4,2107.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Version="V2">
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Hup Hin SDMS" sap:VirtualizedContainerService.HintSize="1038.4,2005.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do Huphin SDMS" sap:VirtualizedContainerService.HintSize="723.2,1890.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="s:DateTime" Name="StartDate" />
-                  </Sequence.Variables>
+                <Sequence DisplayName="Do Huphin SDMS" sap:VirtualizedContainerService.HintSize="764.8,1788.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[String.IsNullOrEmpty( in_Config1(&quot;StartDateDaily&quot;).tostring)]" DisplayName="If check if user has entered start date'" sap:VirtualizedContainerService.HintSize="681.6,449.6" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[String.IsNullOrEmpty( in_Config1(&quot;StartDateDaily&quot;).tostring)]" DisplayName="If check if user has entered start date'" sap:VirtualizedContainerService.HintSize="723.2,449.6" sap2010:WorkflowViewState.IdRef="If_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Assign DisplayName="Assign Start Date" sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="s:DateTime">[StartDate]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="s:DateTime">[new System.DateTime(now.Year,now.Month,1)]</InArgument>
-                        </Assign.Value>
-                      </Assign>
+                      <Sequence DisplayName="User has not entered any date in config" sap:VirtualizedContainerService.HintSize="304,156" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Assign Start Date" sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ConvertedStartDate]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Now.ToString("dd/MM/yyyy")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
                     </If.Then>
                     <If.Else>
                       <Sequence DisplayName="User has entered start date" sap:VirtualizedContainerService.HintSize="375.2,288.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
@@ -187,24 +197,16 @@
                         <ui:LogMessage DisplayName="Log Message - user entered start date" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;User has entered Start Date for Daily process in Config file. It is: &quot; +in_Config1(&quot;StartDateDaily&quot;).tostring]" />
                         <Assign DisplayName="Assign Start date to user choice" sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_12">
                           <Assign.To>
-                            <OutArgument x:TypeArguments="s:DateTime">[StartDate]</OutArgument>
+                            <OutArgument x:TypeArguments="x:String">[ConvertedStartDate]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="s:DateTime">[CDate(in_Config1("StartDateDaily").tostring)]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[in_Config1("StartDateDaily").ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
                       </Sequence>
                     </If.Else>
                   </If>
-                  <Assign DisplayName="Assign Converted Start Date" sap:VirtualizedContainerService.HintSize="681.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_3">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[ConvertedStartDate]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[StartDate.ToString("dd/MM/yyyy")]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Start Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="681.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="WindowMessages" ScopeIdentifier="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Text="[ConvertedStartDate]" Version="V1">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Start Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="723.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="WindowMessages" ScopeIdentifier="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Text="[ConvertedStartDate]" Version="V1">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://hhtc.insightservicing.sg/deliveryOrder" DesignTimeRectangle="398, 502, 541, 43" ElementType="InputBox" FriendlyName="'04/11/2022'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='grd-white form-control' aaname='Start Date' /&gt;" Guid="5ca27dbf-d330-4ab1-9fd6-137dfa3d3bc6" ImageBase64="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" InformativeScreenshot="0696e76bfb7570b84cc94cdef973d0c0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -215,7 +217,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey #1" sap:VirtualizedContainerService.HintSize="681.6,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey #1" sap:VirtualizedContainerService.HintSize="723.2,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
                     <ui:SendHotkey.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a3846f4e-d1f1-4c3f-971a-e48853b4f5b2">
                         <ui:Target.TimeoutMS>
