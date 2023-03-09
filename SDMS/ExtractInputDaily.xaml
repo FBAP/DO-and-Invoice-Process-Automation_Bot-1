@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1148,5205.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1148,5204.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractInput_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This .xaml will extract input from SDMS for Daily process." DisplayName="Extract Input for Daily process main sequence" sap:VirtualizedContainerService.HintSize="1158.4,5140.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap2010:Annotation.AnnotationText="This .xaml will extract input from SDMS for Daily process." DisplayName="Extract Input for Daily process main sequence" sap:VirtualizedContainerService.HintSize="1158.4,5140" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ExcelFilename" />
       <Variable x:TypeArguments="x:String" Name="ConvertedStartDate" />
@@ -115,7 +115,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch Extract input for daily" sap:VirtualizedContainerService.HintSize="1116.8,5016.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Extract input for daily" sap:VirtualizedContainerService.HintSize="1116.8,5016" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -123,7 +123,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Extract the total records to process from SDMS web portal." DisplayName="Extract Input for Daily process" sap:VirtualizedContainerService.HintSize="1080,4762.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="Extract the total records to process from SDMS web portal." DisplayName="Extract Input for Daily process" sap:VirtualizedContainerService.HintSize="1080,4761.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="dt_DatatableExtracted" />
           </Sequence.Variables>
@@ -229,7 +229,7 @@
                       </ui:Target>
                     </ui:SendHotkey.Target>
                   </ui:SendHotkey>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'DO printed'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="681.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" ScopeIdentifier="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Text="[in_Config1(&quot;DailyDOPrintedFilter&quot;).ToString]" Version="V1">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'DO printed'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="723.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" ScopeIdentifier="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Text="[in_Config1(&quot;DailyDOPrintedFilter&quot;).ToString]" Version="V1">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://hhtc.insightservicing.sg/deliveryOrder" DesignTimeRectangle="1267, 564, 541, 43" ElementType="DropDown" FriendlyName="'All'" FullSelectorArgument="&lt;webctrl id='DeliveryOrderSearchForm_isDoPrinted' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='DeliveryOrderSearchForm_isDoPrinted' tag='SELECT' type='' class='form-control' aaname='DO printed' /&gt;" Guid="d434e18f-67f6-48c1-9b1f-2e40264c73a5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAiEAAAAvCAYAAAA1ghreAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANTSURBVHhe7dzBSxxnGMDh/pNz2ZPkL5CgJy+VgOdKrh6Chxa8xYN4MdA2h01TBCnBbiCQBC9ZhCWNEBDN2327s5sxbmCxOt+6PA+8sPPNd/Dmj29m94cAAChAhAAARYgQAKCIaxHSP/0YR8fv4vnLXvz2x9/GGGOMMTee7InsiuyLb12JkDfv+3H46m2cDj7F5eWXehUA4GayJ7Irsi+yM5omEZKFkhvEBwBw27IvsjOaJyKTCMmjkiwVAIC7kJ2RvTE2iZB8ZuMUBAC4K9kZ2RtjkwjJl0cAAO5SszdECADQGhECABQhQgCAIkQIAFCECAEAihAhAEARIgQAKEKEAABFiBAAoIi5jZAPe2tRVVvxV30dw09bVRVrex/qawDgPisXIf39WBtGxfLTk3rhKhECAIutWIScPF2OqtOJzoPt6F3Uiw0iBAAWW5kIuejF9oMqNvb2Y3MYIltH9XqDCAGA+bazsxNnZ2f11XV5L/d8T5kIOd6OpWojfv/nPLqPO9F53I3z+taYCAGA+ZVxUQ3/L6+urk4NkVzLe7nneyFSIEJG4VH9NAqP8xeb0anW42AwujsmQgBgfmVkrKysTA2RZoDknmmRktqPkMFBrFed2HxRn31cDOOiU8X6s6sVIkIAYL5NC5FZAyS1HiGDZ+tRdTaj+7leGOo9WYrq4W40vycjQgBg/n0bIrMGSGo5Qk5i92EV1Y+/RPfPwzisp/vzMEyqpdh+XW8bEiEAcD80Q2TWAEntRsjrfCF19AdOm6UnvXqjCAGA+2QcIrMGSGo1QqY9dhkb/W7I18c0IgQA7peMj1kDJLUXIZ+7sTnlBdSJk91YbrywKkIAYLG1FiFnv24Mo+L6V3G/GsTBoyqqRwfDTyIEABZdaxGSgTHtR8maRr8Zshb7fRECAIuutQgBAGgSIQBAESIEAChChAAARYgQAKAIEQIAFCFCAIAiRAgAUMTUCHn+sheXl1/qKwCA25Wdkb0xNomQo+N3cTr4VF8BANyu7IzsjbFJhPRPP8bhq7dOQwCAW5d9kZ2RvTE2iZD05n3/vw1ZKmIEAPi/sieyK7IvsjOarkRIykLJo5J8ZpMvjxhjjDHG3HSyJ7IrmicgY9ciBACgDSIEACgg4l9O0zponiQJdQAAAABJRU5ErkJggg==" InformativeScreenshot="7ff329b1df34da868435d21d48782d0f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -240,7 +240,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey #2" sap:VirtualizedContainerService.HintSize="681.6,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="tab" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey #2" sap:VirtualizedContainerService.HintSize="723.2,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="tab" KeyModifiers="None" SpecialKey="True">
                     <ui:SendHotkey.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="300c054d-287a-4e15-bed5-69131df1ae97">
                         <ui:Target.TimeoutMS>
@@ -252,7 +252,7 @@
                       </ui:Target>
                     </ui:SendHotkey.Target>
                   </ui:SendHotkey>
-                  <uix:NClick ClickType="Single" DelayAfter="[Cint(in_Config1(&quot;DelayAfterMedium&quot;))]" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="681.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Version="V1">
+                  <uix:NClick ClickType="Single" DelayAfter="[Cint(in_Config1(&quot;DelayAfterMedium&quot;))]" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="723.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4ec8c3c-4a8c-458a-b477-0115bf2088a3" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://hhtc.insightservicing.sg/deliveryOrder" DesignTimeRectangle="385, 686, 113, 43" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='blue-dark btn btn-info' aaname=' Search' check:innerText='SEARCH' /&gt;" Guid="4f07dcaa-640a-47fb-998e-2543d2d8f840" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAvCAYAAADdEYUtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARLSURBVHhe7ZzfaxNLFMf9S++7z3m4vvTFh9tqLYhcUHtvBFHUikWKUorXS1uKrRgJQWiDhkr6sJSNKSxlE0pC+XpmZ87sZjNrWm3AnZ4vfGmzc/bnZ86Zs3nIFYi8k0D1UALVQ1monW6EG/ee49rNB/ijMi8umf+8UTUkM1D/fvQKV2fuOHcQl8MsC1UytPxmWaiuIHG5zBKoHpklUD0yS6B6ZJZA9cgsgeqRWQLVI7MEqkdmCVSPzBKoHpklUD0ya/pQP3TNGYz6B3jqihP/slnTg7pygJ45tlPhJ/d+4p82azpQR4CeYHclHdsIzWYlAXuhZk0FqgVXVGptSR4F7vYyVptd9IZmF9KgH6NdX8d1NV5YEbrYyB9rLcAgGYvReJYbq6xjt58MpjodohfuY7Waj53HzMs9tKMTDE4zsVEXjTdLybh+Bq77M+eZwjLEunio9iH/GJgFPyFbq7uxjutHaDX30Trsgp4louaajuHzHQfY/riX8Q6quWO9+Eozw0Cw+1sz1BgttX/jAO0jOpHSSYCV2TR2bjM09zhEFIbYbVJsGBPg9J79gspZOOmizxT3FppphO3MQx0xQ51YymtoK6CUeY1j+jt2XoaazfBF/BeobUB702ybpeMkVYOAvVo0ceP2E+qkh8wwfnhzrzUAyp6aowQmPiPUypYuDZ3GEu4mM2WI1lo2xgV1Hk9bOluDD/pzxdzfoL1jY1yWTHWNG8+97+p1kEpb0KyjejsXU1R+/8+WV864CLX79PnZPv2XB+OCujQGx0J+zzFu8/LS+9ZFQEtG6gg9VTFKBbXyCaZi2dk9bn6AdNOtdcd41ou4+y5AZBulITqtGhZ4nKHmlc3cWXNNR18wl2xb0xXgNMQqx9hrStfU4FifdEDH4vMVZ+CoGWqhygU1nc1K42BToM4OtdAPUd3aR2D2VVlWUdvPUH7n6iovSXFkM6ZjjtPe4nUxe12p1KSbyRzrfJnqS/k1njhTWee9OdWoqOeqOlL1eSLUJdSOVECBgrqeHBaqmWjcEOU734aeIIOvW3aby15CVc5m7KhO0MtmReENPsRMfg2t7CA5LO8zCeoTvX6mpZedgZhAy0El83o+CGoGPPn+Hjoq7JQ68seXpfs9s/khGjlvUq+F6qW+3fqC7WZgy2bvs1mLixol855aber33E5dfymQ9ejYOFT1xcdGqNJ1SK80KcAFavJ086beUwM01DstlfSoH1uIlxSqcg7sWLatY/swHvk2CUPqgj++Tde5okYpgWMaIvWeq7rekWOTTReMb3uUxS6o5CplpupWh9RU2TJMzdsmre9x5sKSb5QCbDzRMZcYqnLBwxSf26zfAKr4oswSqB6ZJVA9MkugemSWQPXILIHqkVkC1SOzBKpHZglUj8wSqB6ZJVA9MstClV9nKb9ZFuqtf5dR+esfZ7C4HGZZqOoXzxYIrGRsOe38xTORLwK+A4SdIAgHm6u0AAAAAElFTkSuQmCC" InformativeScreenshot="1078ca77111a8cb8575c6d073c904302.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hup Hin SDMS' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -263,7 +263,7 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey to page down" sap:VirtualizedContainerService.HintSize="681.6,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey to page down" sap:VirtualizedContainerService.HintSize="723.2,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SpecialKey="True">
                     <ui:SendHotkey.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3049582b-4ef0-4495-af54-e5e5a355b932">
                         <ui:Target.TimeoutMS>
@@ -288,13 +288,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser for DO page" sap:VirtualizedContainerService.HintSize="1038.4,531.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8f86916f-c660-4cb5-b1a6-80b557550b8b" Version="V2">
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser for DO page" sap:VirtualizedContainerService.HintSize="1038.4,530.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8f86916f-c660-4cb5-b1a6-80b557550b8b" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do #2" sap:VirtualizedContainerService.HintSize="375.2,314.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                <Sequence DisplayName="Do #2" sap:VirtualizedContainerService.HintSize="375.2,313.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

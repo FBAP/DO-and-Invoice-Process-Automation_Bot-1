@@ -783,7 +783,7 @@
                                     <InArgument x:TypeArguments="x:String">["InputExcelMonthly_"+now.ToString("ddMMyyyyhhmmss")+".xlsx"]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <Assign DisplayName="Assign ExcelFilepath" sap:VirtualizedContainerService.HintSize="1006.4,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                <Assign DisplayName="Assign ExcelFilepath" sap:VirtualizedContainerService.HintSize="2415.2,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[out_InputExcelFileMonthly]</OutArgument>
                                   </Assign.To>
@@ -791,7 +791,7 @@
                                     <InArgument x:TypeArguments="x:String">[string.Join("\",in_InputExcelFolderPathMonthly.ToString,ExcelFilename)]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope for input file" sap:VirtualizedContainerService.HintSize="1006.4,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[out_InputExcelFileMonthly]">
+                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope for input file" sap:VirtualizedContainerService.HintSize="2415.2,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[out_InputExcelFileMonthly]">
                                   <ui:ExcelApplicationScope.Body>
                                     <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                       <ActivityAction.Argument>
@@ -808,7 +808,7 @@
                                     </ActivityAction>
                                   </ui:ExcelApplicationScope.Body>
                                 </ui:ExcelApplicationScope>
-                                <ui:LogMessage DisplayName="Log Message - input file ready" sap:VirtualizedContainerService.HintSize="1006.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Input fie is ready for processing.&quot;]" />
+                                <ui:LogMessage DisplayName="Log Message - input file ready" sap:VirtualizedContainerService.HintSize="2415.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Input fie is ready for processing.&quot;]" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
@@ -863,11 +863,11 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <ui:LogMessage DisplayName="Log Message - End of Extract input sequence for Monthly process" sap:VirtualizedContainerService.HintSize="2076.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;End of Extract Sequence of Monthly process.&quot;]" />
+          <ui:LogMessage DisplayName="Log Message - End of Extract input sequence for Monthly process" sap:VirtualizedContainerService.HintSize="3060.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;End of Extract Sequence of Monthly process.&quot;]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="2121.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="3105.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -900,7 +900,7 @@
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="2121.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="3105.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
