@@ -156,18 +156,10 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke NetworkFolderFileAccessible workflow - schedule details file" sap:VirtualizedContainerService.HintSize="375.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Reusable Code\NetworkFileAccessible.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_NetworkFileFolderPath">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ScheduleDetailsFilepath&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="in_RetryNumber">
-                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Cint( in_Config(&quot;RetryNumber&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_Word">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ScheduleDetailsFileFolderName&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_RetryIntervalMedium">
-                  <mva:VisualBasicValue x:TypeArguments="x:TimeSpan" ExpressionText="Timespan.Parse(in_Config(&quot;RetryIntervalMedium&quot;).ToString)" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_NetworkFileFolderPath">[in_Config("ScheduleDetailsFilepath").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_RetryNumber">[Cint( in_Config("RetryNumber"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Word">[in_Config("ScheduleDetailsFileFolderName").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_RetryIntervalMedium">[Timespan.Parse(in_Config("RetryIntervalMedium").ToString)]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke NetworkFolderFileAccessible workflow - Master file" sap:VirtualizedContainerService.HintSize="375.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Reusable Code\NetworkFileAccessible.xaml">
@@ -188,12 +180,8 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CheckAllColumnsMasterFile workflow" sap:VirtualizedContainerService.HintSize="375.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Reusable Code\CheckAllColumnsMasterFile.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">
-                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                </InArgument>
-                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_MonthlyCustDT1">
-                  <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="out_dt_MonthlyCustDT" />
-                </OutArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">[in_Config]</InArgument>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_MonthlyCustDT1">[out_dt_MonthlyCustDT]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <Sequence DisplayName="Applications check - Excel" sap:VirtualizedContainerService.HintSize="375.2,585.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
