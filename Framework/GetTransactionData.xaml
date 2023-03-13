@@ -20,7 +20,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2300,4500.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2300,3532.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
@@ -110,7 +110,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="2310.4,4436" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="2310.4,4476" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="InputExcelFileDaily" />
       <Variable x:TypeArguments="x:String" Name="InputExcelFileConsolidated" />
@@ -127,7 +127,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="2268.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]" />
-    <If Condition="[io_dt_TransactionData is Nothing]" DisplayName="if row count is greater than transaction number Assign transaction datatable to nothing" sap:VirtualizedContainerService.HintSize="2268.8,1788" sap2010:WorkflowViewState.IdRef="If_25">
+    <If Condition="[io_dt_TransactionData is Nothing]" DisplayName="if row count is greater than transaction number Assign transaction datatable to nothing" sap:VirtualizedContainerService.HintSize="2268.8,1828" sap2010:WorkflowViewState.IdRef="If_25">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,7 +135,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <If Condition="[io_ProcessCounter=0]" DisplayName="If - Trnasaction DT is empty Check process counter" sap:VirtualizedContainerService.HintSize="1338.4,1628.8" sap2010:WorkflowViewState.IdRef="If_34">
+        <If Condition="[io_ProcessCounter=0]" DisplayName="If - Trnasaction DT is empty Check process counter" sap:VirtualizedContainerService.HintSize="1338.4,1668.8" sap2010:WorkflowViewState.IdRef="If_34">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,16 +143,16 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence DisplayName="Process Counter is 0" sap:VirtualizedContainerService.HintSize="1052.8,1469.6" sap2010:WorkflowViewState.IdRef="Sequence_123">
+            <Sequence DisplayName="Process Counter is 0" sap:VirtualizedContainerService.HintSize="1052.8,1509.6" sap2010:WorkflowViewState.IdRef="Sequence_123">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="If Process is running first time" sap:VirtualizedContainerService.HintSize="1011.2,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;Transaction datatable is empty.&quot;]">
+              <ui:LogMessage DisplayName="If Process is running first time" sap:VirtualizedContainerService.HintSize="1011.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;Transaction datatable is empty.&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -484,34 +484,26 @@
               </ui:InvokeWorkflowFile>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CreateInputFolder workflow Daily" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Reusable Code\CreateInputFolder.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">[in_Config]</InArgument>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_ProcessType1">[io_ProcessType]</InOutArgument>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_InputExcelPath">[InputFolderPathDaily]</InOutArgument>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">
+                    <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                  </InArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_ProcessType1">
+                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_ProcessType" />
+                  </InOutArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_InputExcelPath">
+                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="InputFolderPathDaily" />
+                  </InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExtractInputDaily workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="SDMS\ExtractInputDaily.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_InputExcelFolderPathDaily">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="InputFolderPathDaily" />
-                  </InArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_InputExcelFileDaily">
-                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="InputExcelFileDaily" />
-                  </OutArgument>
-                  <InOutArgument x:TypeArguments="x:Int32" x:Key="io_ProcessCounterDaily">
-                    <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="io_ProcessCounter" />
-                  </InOutArgument>
-                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">
-                    <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_ExScreenshotsFolderPath">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ExScreenshotsFolderPath&quot;).ToString" />
-                  </InArgument>
-                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_InputDaily">
-                    <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="InputDaily" />
-                  </OutArgument>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_ProcessType1">
-                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_ProcessType" />
-                  </InOutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_InputExcelFolderPathDaily">[InputFolderPathDaily]</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_InputExcelFileDaily">[InputExcelFileDaily]</OutArgument>
+                  <InOutArgument x:TypeArguments="x:Int32" x:Key="io_ProcessCounterDaily">[io_ProcessCounter]</InOutArgument>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">[in_Config]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_ExScreenshotsFolderPath">[in_Config("ExScreenshotsFolderPath").ToString]</InArgument>
+                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_InputDaily">[InputDaily]</OutArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_ProcessType1">[io_ProcessType]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <If sap2010:Annotation.AnnotationText="Read input file stored in input folder for the first time process runs for daily" Condition="[(io_dt_TransactionData is Nothing) and (InputDaily=True)]" DisplayName="Read input file - Daily" sap:VirtualizedContainerService.HintSize="483.2,308" sap2010:WorkflowViewState.IdRef="If_2">
@@ -619,7 +611,7 @@
                 </If.Else>
               </If>
             </Sequence>
-            <Sequence x:Key="Monthly" DisplayName="Extract data and assign itto transaction data" sap:VirtualizedContainerService.HintSize="524.8,1239.2" sap2010:WorkflowViewState.IdRef="Sequence_113">
+            <Sequence x:Key="Monthly" DisplayName="Extract data and assign itto transaction data" sap:VirtualizedContainerService.HintSize="524.8,1252" sap2010:WorkflowViewState.IdRef="Sequence_113">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
