@@ -180,7 +180,7 @@
                           <OutArgument x:TypeArguments="s:DateTime">[StartDate]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="s:DateTime">[new System.DateTime(now.Year,now.Month,1)]</InArgument>
+                          <InArgument x:TypeArguments="s:DateTime">[new System.DateTime(now.Year,now.Month,1).AddMonths(-1)]</InArgument>
                         </Assign.Value>
                       </Assign>
                       <Assign DisplayName="Assign End Date" sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_19">
