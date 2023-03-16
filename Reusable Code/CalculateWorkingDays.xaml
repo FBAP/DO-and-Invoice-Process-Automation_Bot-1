@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>876,810.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>620,806.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CalculateWorkingDays_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -66,10 +66,9 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CalculateWorkingDays" sap:VirtualizedContainerService.HintSize="610.4,745.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CalculateWorkingDays" sap:VirtualizedContainerService.HintSize="610.4,741.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="dayOfWeek" />
       <Variable x:TypeArguments="x:Int32" Name="daysInMonth" />
@@ -136,9 +135,9 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <If Condition="[(dayOfWeek.Equals(&quot;Sunday&quot;) And daysInMonth &gt; 28) Or (dayOfWeek.Equals(&quot;Saturday&quot;) And daysInMonth &gt;= 30) Or (((dayOfWeek.Equals(&quot;Friday&quot;) Or (dayOfWeek.Equals(&quot;Saturday&quot;))) And daysInMonth = 31))]" DisplayName=" check no of sundays" sap:VirtualizedContainerService.HintSize="568.8,223.2" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[(dayOfWeek.Equals(&quot;Sunday&quot;) And daysInMonth &gt; 28) Or (dayOfWeek.Equals(&quot;Saturday&quot;) And daysInMonth &gt;= 30) Or (((dayOfWeek.Equals(&quot;Friday&quot;) Or (dayOfWeek.Equals(&quot;Saturday&quot;))) And daysInMonth = 31))]" DisplayName=" check no of sundays" sap:VirtualizedContainerService.HintSize="568.8,219.2" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign DisplayName="Assign out_NoOfWorkingDays" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">[out_NoOfWorkingDays]</OutArgument>
           </Assign.To>
@@ -148,7 +147,7 @@
         </Assign>
       </If.Then>
       <If.Else>
-        <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign DisplayName="Assign out_NoOfWorkingDays #1" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_3">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">[out_NoOfWorkingDays]</OutArgument>
           </Assign.To>
