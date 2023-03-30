@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>825.6,1194.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1034,1231</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CreateMasterFileFolders_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -67,9 +67,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This .xaml will check if the output folders are created for all processes to save the output master files." DisplayName="Create Folder for saving Daily master output file" sap:VirtualizedContainerService.HintSize="836,1129.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="This .xaml will check if the output folders are created for all processes to save the output master files." DisplayName="Create Folder for saving Daily master output file" sap:VirtualizedContainerService.HintSize="857,1166" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ProcessMasterFilePath" />
       <Variable x:TypeArguments="x:Boolean" Name="ProcessMasterFolderExists" />
@@ -81,17 +82,17 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - Folder for output file created or not" sap:VirtualizedContainerService.HintSize="794.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Checking if &quot;+ in_ProcessType+&quot; folder for Output file is created.&quot;]" />
-    <Assign DisplayName="Assign ProcessMasterFilePath" sap:VirtualizedContainerService.HintSize="794.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message - Folder for output file created or not" sap:VirtualizedContainerService.HintSize="795,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Checking if &quot;+ in_ProcessType+&quot; folder for Output file is created.&quot;]" />
+    <Assign DisplayName="Assign ProcessMasterFilePath" sap:VirtualizedContainerService.HintSize="795,81" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[ProcessMasterFilePath]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[in_Config("MasterFilePath").ToString+in_ProcessType]</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_Config("OutputMasterFilePath").ToString+in_ProcessType]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:FolderExistsX DisplayName="Daily Folder Exists" Exists="[ProcessMasterFolderExists]" sap:VirtualizedContainerService.HintSize="794.4,134.4" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[ProcessMasterFilePath.ToString]" />
-    <If Condition="[ProcessMasterFolderExists]" DisplayName="If master folder exists for output file" sap:VirtualizedContainerService.HintSize="794.4,598.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:FolderExistsX DisplayName="Daily Folder Exists" Exists="[ProcessMasterFolderExists]" sap:VirtualizedContainerService.HintSize="795,133" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[ProcessMasterFilePath.ToString]" />
+    <If Condition="[ProcessMasterFolderExists]" DisplayName="If master folder exists for output file" sap:VirtualizedContainerService.HintSize="795,598" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>698.4,1504.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1122.4,1504.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="47">
@@ -108,6 +108,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="This Sequence will fetch data from SDMS protal for Daily, Consolidated and Monthly process. " DisplayName="Process sequence" sap:VirtualizedContainerService.HintSize="616.8,1440" sap2010:WorkflowViewState.IdRef="Sequence_86">
@@ -154,11 +155,21 @@
               </ui:InvokeWorkflowFile>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DailyProcessSequence workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SDMS\DailyProcessSequence.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem1">[in_TransactionItem]</InArgument>
-                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">[in_Config]</InArgument>
-                  <InOutArgument x:TypeArguments="x:Int32" x:Key="io_TransactionNumber1">[io_TransactionNumber]</InOutArgument>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_TodaysOutputFileDaily1">[io_TodaysOutputFileDaily]</InOutArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_DOPdfFolderPathDaily">[DOPdfFolderPathDaily]</InArgument>
+                  <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem1">
+                    <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_TransactionItem" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">
+                    <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                  </InArgument>
+                  <InOutArgument x:TypeArguments="x:Int32" x:Key="io_TransactionNumber1">
+                    <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="io_TransactionNumber" />
+                  </InOutArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_TodaysOutputFile">
+                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_TodaysOutputFileDaily" />
+                  </InOutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_DOPdfFolderPath">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DOPdfFolderPathDaily" />
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </Sequence>
@@ -178,13 +189,23 @@
                   <OutArgument x:TypeArguments="x:String" x:Key="out_DOPdfFolderPath">[DOPdfFolderPathConso]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ConsolidatedProcessSequence workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SDMS\ConsolidatedProcessSequence.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ConsoProcessSequence workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="SDMS\DailyProcessSequence.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem1">[in_TransactionItem]</InArgument>
-                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">[in_Config]</InArgument>
-                  <InOutArgument x:TypeArguments="x:Int32" x:Key="io_TransactionNumber1">[io_TransactionNumber]</InOutArgument>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_OutputFileConso1">[io_OutputFileConso]</InOutArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_DOPdfFolderPathConso">[DOPdfFolderPathConso]</InArgument>
+                  <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem1">
+                    <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_TransactionItem" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config1">
+                    <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                  </InArgument>
+                  <InOutArgument x:TypeArguments="x:Int32" x:Key="io_TransactionNumber1">
+                    <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="io_TransactionNumber" />
+                  </InOutArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_TodaysOutputFile">
+                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_OutputFileConso" />
+                  </InOutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_DOPdfFolderPath">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DOPdfFolderPathConso" />
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </Sequence>
